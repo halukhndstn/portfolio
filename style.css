@@ -40,6 +40,10 @@ span{
     transition: color 0.3s ease; 
 }
 
+.navbar a.active {
+    color: #49a0bb; 
+}
+
 .navbar a:hover,
 .navbar a.active{
     color: #49a0bb; 
