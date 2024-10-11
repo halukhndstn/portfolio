@@ -29,7 +29,7 @@
 }
 
 span{
-    color: #229799; 
+    color: #49a0bb; 
 }
 
 .navbar a{
@@ -42,7 +42,7 @@ span{
 
 .navbar a:hover,
 .navbar a.active{
-    color: #229799; 
+    color: #49a0bb; 
 }
 
 .contact{
@@ -58,8 +58,63 @@ span{
 }
 
 .contact:hover{
-    background-color: #229799; 
+    background-color: #49a0bb; 
     color: #F5F5F5; 
-    border: 2px solid #229799;
-    box-shadow: 0 0 25px #229799; 
+    border: 2px solid #49a0bb;
+    box-shadow: 0 0 25px #49a0bb; 
+}
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+
+.home-content{
+    max-width: 800px;
+}
+
+.home-content h3{
+    font-size: 62px;
+    line-height: 1.2;
+}
+
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+
+.btn{
+    padding: 15px 58px;
+    background-color: #424242;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transform: 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #49a0bb;
+    color: white;
+    box-shadow: 0 0 25px #49a0bb;
+}
+
+.img-box img{
+    border-radius: 50%;
+    width: 550px;
+    max-width: 100%; 
+    height: auto;    
 }
