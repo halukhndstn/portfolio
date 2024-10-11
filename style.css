@@ -68,7 +68,7 @@ span{
     box-shadow: 0 0 25px #49a0bb; 
 }
 
-.home{
+.section-1{
     width: 100%;
     min-height: 100vh;
     background: #F5F5F5;
@@ -78,16 +78,16 @@ span{
     padding: 30px 12% 0;
 }
 
-.home-content{
+.container{
     max-width: 800px;
 }
 
-.home-content h3{
+.container h3{
     font-size: 62px;
     line-height: 1.2;
 }
 
-.home-content p{
+.container p{
     font-size: 18px;
     margin: 25px 0 30px;
 }
