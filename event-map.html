@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <style>
+        #map {
+            height: calc(100vh - 70px); /* Header'ın yüksekliğini çıkararak kalan alanı doldur */
+            width: 100%;
+            margin-top: 70px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo">
+        <a class="logo">
             <span>@</span>halukhndstn
         </a>
         
@@ -21,5 +31,24 @@
 
         <a href="contact.html" class="contact">Contact</a>
     </header>
+    
+    <div id="map"></div>
+    
+    <script>
+        var map = L.map('map').setView([39.9334, 32.8597], 6);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var locations = [
+            { lat: 41, lon: 28, popup: "deneme" },
+        ];
+
+        locations.forEach(function(location) {
+            var marker = L.marker([location.lat, location.lon]).addTo(map);
+            marker.bindPopup(location.popup);
+        });
+    </script>
 </body>
 </html>
