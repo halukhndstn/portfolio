@@ -10,9 +10,33 @@
     
     <style>
         #map {
-            height: calc(100vh - 70px); /* Header'ın yüksekliğini çıkararak kalan alanı doldur */
+            height: calc(100vh - 70px);
             width: 100%;
             margin-top: 70px;
+        }
+        #location-list {
+            position: absolute;
+            top: 80px; 
+            right: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        #location-list ul {
+            list-style-type: disc; 
+            padding-left: 20px; 
+            margin: 0;
+        }
+
+        #location-list li {
+            margin-bottom: 8px;
+            cursor: pointer;
+            color: black;
         }
     </style>
 </head>
@@ -34,21 +58,10 @@
     
     <div id="map"></div>
     
-    <script>
-        var map = L.map('map').setView([39.9334, 32.8597], 6);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        var locations = [
-            { lat: 41, lon: 28, popup: "deneme" },
-        ];
-
-        locations.forEach(function(location) {
-            var marker = L.marker([location.lat, location.lon]).addTo(map);
-            marker.bindPopup(location.popup);
-        });
-    </script>
+    <div id="location-list">
+        <ul id="locations"></ul>
+    </div>
+        
+    <script src="./script.js"></script>
 </body>
 </html>
