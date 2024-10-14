@@ -17,7 +17,7 @@ locations.forEach(function(location, index) {
     marker.bindPopup(location.popup);
 
     var li = document.createElement('li');
-    li.textContent = location.popup.split('<strong>')[1].split('</strong>')[0]; // Extract the title
+    li.textContent = location.popup.split('<strong>')[1].split('</strong>')[0];
     li.onclick = function() {
         map.setView([location.lat, location.lon], 10); 
         marker.openPopup(); 
