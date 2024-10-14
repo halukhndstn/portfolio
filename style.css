@@ -7,6 +7,11 @@
     list-style: none;
 }
 
+body {
+    background-color: #F5F5F5; 
+    margin: 0; 
+}
+
 .header{
     position: fixed;
     display: flex;
@@ -22,7 +27,6 @@
     align-items: center;
     z-index: 1000;
 }
-
 
 .logo{
     font-size: 25px;
@@ -51,6 +55,56 @@ span{
 .navbar a.active{
     color: #49a0bb; 
 }
+
+#name, #role {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s forwards; 
+}
+
+#name {
+    animation-delay: 0.5s; 
+}
+
+#role {
+    animation-delay: 1s; 
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+#cv-button {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s forwards; 
+    animation-delay: 1.5s; 
+}
+
+#about-heading, #about-description {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s forwards; 
+}
+
+#about-heading {
+    animation-delay: 0.5s; 
+}
+
+#about-description {
+    animation-delay: 1s; 
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
 
 .contact{
     padding: 10px 28px;
@@ -158,6 +212,59 @@ img-box-project {
     background: #F5F5F5; 
 }
 
+#projects-heading, #projects-description {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s forwards; 
+}
+
+#projects-heading {
+    animation-delay: 0.5s; 
+}
+
+#projects-description {
+    animation-delay: 1s; 
+}
+
+.project {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s forwards; 
+}
+
+.project-title, .project-description {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s forwards; 
+}
+
+.project-title {
+    animation-delay: 1.5s;
+}
+
+.project-description {
+    animation-delay: 2s; 
+}
+
+.project-img {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s forwards; 
+    animation-delay: 2.5s; 
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.projects-container {
+    margin-top: 20px; 
+}
+
+
 #map {
     height: calc(100vh - 70px);
     width: 100%;
@@ -227,4 +334,32 @@ img-box-project {
 
 .social-media a:hover {
     color: #49a0bb; 
+}
+
+#contact-heading, #contact-description {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s forwards; 
+}
+
+#contact-heading {
+    animation-delay: 0.5s; 
+}
+
+#contact-description {
+    animation-delay: 1s; 
+}
+
+.contact-info {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s forwards; 
+    animation-delay: 1.5s; 
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
