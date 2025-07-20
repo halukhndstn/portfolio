@@ -24,3 +24,33 @@ locations.forEach(function(location, index) {
     };
     document.getElementById('locations').appendChild(li);
 });
+
+const header   = document.querySelector('.header');
+const headerH  = header.offsetHeight;
+const sections = Array.from(document.querySelectorAll('section[id]'))
+                      .sort((a, b) => a.offsetTop - b.offsetTop);
+const navLinks = document.querySelectorAll('.navbar a');
+
+function updateActiveNav() {
+  const scrollPos = window.pageYOffset + headerH + 1;
+  let currentId = sections[0].id;
+
+  for (let sec of sections) {
+    if (sec.offsetTop <= scrollPos) {
+      currentId = sec.id;
+    } else {
+      break;
+    }
+  }
+
+  navLinks.forEach(link => {
+    link.classList.toggle(
+      'active',
+      link.getAttribute('href') === `#${currentId}`
+    );
+  });
+}
+
+// Yüklendiğinde ve kaydırıldıkça çalıştır
+window.addEventListener('load',  updateActiveNav);
+window.addEventListener('scroll', updateActiveNav);
