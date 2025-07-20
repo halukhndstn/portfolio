@@ -1,36 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>halukhndstn Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <title>halukhndstn Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
-    <header class="header">
-        <a class="logo">
-            <span>@</span>halukhndstn
-        </a>
-        
-        <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="event-map.html">Event Map</a>
-        </nav>
 
-        <a href="contact.html" class="contact">Contact</a>
-    </header>
+  <header class="header">
+    <a class="logo"><span>@</span>halukhndstn</a>
+    <nav class="navbar">
+      <a href="#home"    class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#event-map">Event Map</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section class="section-1">
-        <div class="container">
-            <h3 id="name">Hi, I'm Haluk Hindistan</h3>
-            <h4 id="role">4th Year Geomatics Engineering Student - Junior Full Stack Developer</h4>
-            <!-- <p>"Geomatics Engineering student with a passion for programming"</p> -->
-            <!-- <p>I'm interested in WEB Programming, Image Processing, QGIS Plugin Development and Data Science</p> -->
+  <!-- Home -->
+  <section id="home" class="section-1">
+    <div class="container">
+      <h3 id="name">Hi, I'm Haluk Hindistan</h3>
+      <h4 id="role">4th Year Geomatics Engineering Student - Junior Full Stack Developer</h4>
+    </div>
+    <div class="img-box">
+      <img src="./images/avatar.jpg" alt="Avatar">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section-1">
+    <div class="container">
+      <h3 id="about-heading">About Me</h3>
+      <p id="about-description">
+        I am a Geomatics Engineering student at Hacettepe University and I am passionate about the field of Geographic Information Systems. 
+        As a 4th year student, I am developing myself especially in the field of web-based geographic information systems. Having basic knowledge 
+        about WEB programming allows me to advance in this field and motivates me to develop solutions that meet the needs of our age. In addition, 
+        I am constantly trying to improve myself as someone who is open to learning all kinds of new business lines and projects, not only in this 
+        field; but also in my profession and in the field of programming.
+      </p>
+      <div class="btn-box">
+        <a id="cv-button" href="./documents/haluk-hindistan-cv.pdf" class="btn" target="_blank">CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section-project">
+    <div class="container">
+      <h3 id="projects-heading">My Projects</h3>
+      <p id="projects-description">Here are my projects hosted on GitHub. Click on the images to view them!</p>
+      <div class="projects-container">
+        <div class="project">
+          <h4 class="project-title">Project 1: User Location Map</h4>
+          <a href="https://github.com/halukhndstn/user-location-map" target="_blank">
+            <img src="./images/user-loc.png" alt="User Location Map Screenshot" class="img-box-project project-img">
+          </a>
+          <p class="project-description">
+            A simple WEB based GIS application where the user can view and edit locations from a PostgreSQL database.
+          </p>
         </div>
-        <div class="img-box">
-            <img src="./images/avatar.jpg" alt="Avatar">
+        <div class="project">
+          <h4 class="project-title">Project 2: QGIS Rasterize-Polygonize Extension</h4>
+          <a href="https://github.com/halukhndstn/Rasterize-Polygonize" target="_blank">
+            <img src="./images/ras-pol.png" alt="Rasterize Polygonize Screenshot" class="img-box-project project-img">
+          </a>
+          <p class="project-description">
+            QGIS plugin that performs rasterization and polygonization operations in a single tool, and also converts CSV to TIFF and TIFF to CSV.
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Map -->
+  <section id="event-map">
+    <div id="map"></div>
+    <div id="location-list">
+      <ul id="locations"></ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section-contact">
+    <div class="container">
+      <h3 id="contact-heading">Contact Me</h3>
+      <p id="contact-description">
+        If you have any questions, suggestions or offers, feel free to contact me!
+      </p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:halukhndstn@gmail.com">halukhndstn@gmail.com</a></p>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/haluk-hindistan" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/halukhndstn/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
